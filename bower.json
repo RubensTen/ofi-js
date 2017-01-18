@@ -1,0 +1,27 @@
+{
+  "name": "ofi-js",
+  "authors": [
+    "RubensTen <rubens.prl10@gmail.com>"
+  ],
+  "description": "test of ofi.com.mx",
+  "main": "",
+  "keywords": [
+    "test",
+    "app",
+    "angular",
+    "ws"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5"
+  }
+}
