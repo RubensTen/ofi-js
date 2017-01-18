@@ -1,11 +1,13 @@
 angular.module('backendService', [])
-.factory('Backend', ['$http', 'appConfig', function($http, appConfig){
+.factory('Backend', ['$http', 'appConfig', '$window', function($http, appConfig, $window){
 	
 	var backendServiceFactory = {};
 
 		backendServiceFactory.obtenerInfo = obtenerInfo;
 		
 		backendServiceFactory.mockInfo = mockInfo;		
+
+		backendServiceFactory.getXMLStructure = getXMLStructure;
 
 		return backendServiceFactory;
 
@@ -18,7 +20,8 @@ angular.module('backendService', [])
 		return $http.get(appConfig.ws);
 	}
 
-	function mockInfo(){
-		return $http.get('http://localhost:81/ofi-js/app/data.json');
+	function mockInfo(){		
+		var hostOrigin = $window.location.origin;
+		return $http.get(hostOrigin + '/ofi-js/app/data.json');
 	}
 }]);
